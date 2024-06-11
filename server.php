@@ -86,8 +86,18 @@ $hotels = [
     <ul class="row m-0 p-0 justify-content-between">
         <h2 class="text-center py-2">Lista Hotel con/senza parcheggio</h2>
         <?php
+        //// STAMPO TUTTI GLI HOTEL E POI NELLA CONDIZIONE FACCIO SCEGLIERE ALL'UTENTE CON INPUT SE LI VUOLE FILTRARE CON PARCHEGGIO O SENZA
+        // foreach ($hotels as $hotel) {
+        //     if ($parking == $hotel['parking']) {
+        //         echo "<li class='bg-primary col-4 p-0 px-2 m-1'>" . "Il nome dell'hotel è:" . " " . $hotel['name'] . "</li>";
+        //         echo "<li class='bg-danger col-3 p-0 px-2 m-1'>" . " C'è parcheggio?" . " " . $hotel['parking'] . "</li>";
+        //         echo "<li class='bg-warning col-4 p-0 px-2 m-1'>" . " Il voto è: " . " " . $hotel['vote'] . "</li>";
+        //     }
+        // }
+
+        ////STAMPO GLI HOTEL CON O SENZA PARCHEGGIO DIPENDE DALL'INPU DELL'UTENTE MA CON VOTO = O SUPERIORE AL 3
         foreach ($hotels as $hotel) {
-            if ($parking == $hotel['parking']) {
+            if ($parking == $hotel['parking'] && $hotel['vote'] >= 3) {
                 echo "<li class='bg-primary col-4 p-0 px-2 m-1'>" . "Il nome dell'hotel è:" . " " . $hotel['name'] . "</li>";
                 echo "<li class='bg-danger col-3 p-0 px-2 m-1'>" . " C'è parcheggio?" . " " . $hotel['parking'] . "</li>";
                 echo "<li class='bg-warning col-4 p-0 px-2 m-1'>" . " Il voto è: " . " " . $hotel['vote'] . "</li>";
