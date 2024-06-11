@@ -1,4 +1,5 @@
 <?php
+$parking = $_GET["parking"];
 $titlePage = "Stampa la lista degli Hotel";
 $hotels = [
 
@@ -76,6 +77,21 @@ $hotels = [
             echo "<li class='bg-primary col-4 p-0 px-2 m-1'>" . "Il nome dell'hotel è:" . " " . $hotel['name'] . "</li>";
             echo "<li class='bg-danger col-3 p-0 px-2 m-1'>" . " C'è parcheggio?" . " " . $hotel['parking'] . "</li>";
             echo "<li class='bg-warning col-4 p-0 px-2 m-1'>" . " Il voto è: " . " " . $hotel['vote'] . "</li>";
+        }
+        ?>
+    </ul>
+
+    <hr>
+
+    <ul class="row m-0 p-0 justify-content-between">
+        <h2 class="text-center py-2">Lista Hotel con/senza parcheggio</h2>
+        <?php
+        foreach ($hotels as $hotel) {
+            if ($parking == $hotel['parking']) {
+                echo "<li class='bg-primary col-4 p-0 px-2 m-1'>" . "Il nome dell'hotel è:" . " " . $hotel['name'] . "</li>";
+                echo "<li class='bg-danger col-3 p-0 px-2 m-1'>" . " C'è parcheggio?" . " " . $hotel['parking'] . "</li>";
+                echo "<li class='bg-warning col-4 p-0 px-2 m-1'>" . " Il voto è: " . " " . $hotel['vote'] . "</li>";
+            }
         }
         ?>
     </ul>
