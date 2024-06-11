@@ -1,6 +1,7 @@
 <?php
 $parking = $_GET["parking"];
 $titlePage = "Stampa la lista degli Hotel";
+$searchHotelParking = "Vuoi sapere gli hotel con parcheggio?";
 $hotels = [
 
     [
@@ -57,6 +58,17 @@ $hotels = [
     <h1 class="text-center py-2">
         <?= $titlePage ?>
     </h1>
+
+    <h2 class="text-center bg-danger py-2">
+        <?= $searchHotelParking ?>
+    </h2>
+    <form action="server.php" method="GET" class="text-center py-2">
+        <input type="radio" id="true" name="parking" value="1">
+        <label for="true">C'è Parcheggio</label><br>
+        <input type="radio" id="false" name="parking" value="">
+        <label for="false">Non c'è parcheggio</label><br>
+        <button type="submit">Cerca</button>
+    </form>
 
     <!-- <ul>
         STAMPO CON IL TAG PRE TUTTA LA LISTA DEGLI HOTEL CON TUTTE LE PROPRIETA'

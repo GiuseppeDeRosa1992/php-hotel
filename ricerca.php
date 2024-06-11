@@ -1,7 +1,7 @@
-<?php
-$ciao = "Ciao Giuseppe, funziona tutto";
-$searchHotelParking = "Vuoi sapere gli hotel con parcheggio?";
-?>
+<!-- <?php
+        $ciao = "Ciao Giuseppe, funziona tutto";
+        $searchHotelParking = "Vuoi sapere gli hotel con parcheggio?";
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +15,14 @@ $searchHotelParking = "Vuoi sapere gli hotel con parcheggio?";
 </head>
 
 <body>
-    <!-- <h1 class="text-center">
+    <h1 class="text-center">
         <?= $ciao ?>
     </h1>
     <form action="server.php" method="GET" class="text-center">
         <label for=""> <?= $searchHotelParking ?></label>
         <input type="text" name="parking" placeholder="C'è il Parcheggio? True or False">
         <button type="submit">Cerca</button>
-    </form> -->
+    </form>
 
     <h1 class="text-center bg-danger py-2">
         <?= $searchHotelParking ?>
@@ -36,4 +36,4 @@ $searchHotelParking = "Vuoi sapere gli hotel con parcheggio?";
     </form>
 </body>
 
-</html>
+</html> -->
