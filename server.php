@@ -55,13 +55,26 @@ $hotels = [
         <?= $titlePage ?>
     </h1>
 
-    <ul>
+    <!-- <ul>
+        STAMPO CON IL TAG PRE TUTTA LA LISTA DEGLI HOTEL CON TUTTE LE PROPRIETA'
         <pre>
             <?= var_dump($hotels) ?>
         </pre>
+        STAMPO IN UN LI IL NOME DELL'HOTEL ALL'INDICE [0]
         <li>
             <?= $hotels[0]['name'] ?>
         </li>
+        </ul> 
+    -->
+
+    <ul>
+        <?php
+        foreach ($hotels as $hotel) {
+            echo "<li>" . "Il nome dell'hotel è:" . $hotel['name'] . "</li>";
+            echo "<li>" . " C'è parcheggio?" . $hotel['parking'] . "</li>";
+            echo "<li>" . " Il voto è: " . $hotel['vote'] . "</li>";
+        }
+        ?>
     </ul>
 </body>
 
